@@ -6,13 +6,13 @@ import { login } from '../../services/user'
 import { useNavigate } from 'react-router-dom'
 
 
-export const LoginForm = () => {
+export const LoginForm = ({setRightButtonText}) => {
     const [form, onChange, clear] = useForm({ email: '', password: '' })
     const navigate = useNavigate()
 
     const onSubmitForm = (e) => {
         e.preventDefault()
-        login(form, clear, navigate)
+        login(form, clear, navigate, setRightButtonText)
     }
 
     return (
