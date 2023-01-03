@@ -1,11 +1,12 @@
 import React from "react"
+import { Router } from "./routes/Router";
 
-function App() {
+export const App = () => {
   return (
     <div >
-      <h1>Cookenu</h1>
+      <Router/>
     </div>
   );
 }
 
-export default App;
+
