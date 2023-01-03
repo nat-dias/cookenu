@@ -2,8 +2,8 @@ import React from 'react'
 
 import './styled.css'
 
-export const AddRecipesPage = () => {
+export const ErrorPage= () => {
     return (
-        <h1>AddRecipesPage</h1>
+        <h1>ErrorPage</h1>
     )
 }
