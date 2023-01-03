@@ -2,22 +2,36 @@ import React from 'react'
 import { InputsContainer } from './styled'
 import { Button, TextField } from '@mui/material'
 import { useForm } from '../../hooks/useForm'
-import { login } from '../../services/user'
 import { useNavigate } from 'react-router-dom'
+import { signUp } from '../../services/user'
 
-
-export const LoginForm = () => {
-    const [form, onChange, clear] = useForm({ email: '', password: '' })
+export const SignUpForm = () => {
+    const [form, onChange, clear] = useForm({ name: '', email: '', password: '' })
     const navigate = useNavigate()
 
     const onSubmitForm = (e) => {
         e.preventDefault()
-        login(form, clear, navigate)
+        console.log(form)
+        signUp(form, clear, navigate)
     }
 
+    
     return (
         <InputsContainer>
             <form onSubmit={onSubmitForm}>
+                <TextField
+                    name={'name'}
+                    value={form.name}
+                    onChange={onChange}
+                    label={"Nome"}
+                    variant={'outlined'}
+                    fullWidth
+                    required
+                    autoFocus
+                    margin={'dense'}
+
+                />
+
                 <TextField
                     name={'email'}
                     value={form.email}
@@ -47,9 +61,8 @@ export const LoginForm = () => {
                     fullWidth
                     variant={'contained'}
                     color={'primary'}
-                    margin={'dense'}
                 >
-                    Fazer login
+                    Cadastrar
                 </Button>
             </form>
         </InputsContainer>
