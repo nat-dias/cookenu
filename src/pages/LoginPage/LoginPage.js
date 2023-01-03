@@ -5,8 +5,10 @@ import { Button } from '@mui/material'
 import { LoginForm } from './LoginForm'
 import { useNavigate } from 'react-router-dom'
 import { goToSignUp } from '../../routes/cordinator'
+import {useUnprotectedPage} from '../../hooks/useUnprotectedPage'
 
 export const LoginPage = () => {
+    useUnprotectedPage()
     const navigate = useNavigate()
     
     return (

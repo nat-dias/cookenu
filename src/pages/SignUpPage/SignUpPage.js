@@ -1,9 +1,16 @@
 import React from 'react'
+import { LogoImage, ScreenContaier } from './styled'
+import logo from '../../assets/logo.jpg'
+import { SignUpForm } from './SignUpForm'
+import {useUnprotectedPage} from '../../hooks/useUnprotectedPage'
 
-import './styled.css'
-
-export const SignUpPage= () => {
+export const SignUpPage = () => {
+    useUnprotectedPage()
+    
     return (
-        <h1>SignUpPage</h1>
+        <ScreenContaier>
+            <LogoImage src={logo} />
+            <SignUpForm />
+        </ScreenContaier>
     )
 }
