@@ -2,8 +2,10 @@ import React from 'react'
 
 import './styled.css'
 
-export const RecipesListPage= () => {
+export const RecipesListPage = () => {
     return (
-        <h1>RecipesListPage</h1>
+        <div>
+            <h1>RecipesListPage</h1>
+        </div>
     )
 }
