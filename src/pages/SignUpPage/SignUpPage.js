@@ -4,13 +4,13 @@ import logo from '../../assets/logo.jpg'
 import { SignUpForm } from './SignUpForm'
 import {useUnprotectedPage} from '../../hooks/useUnprotectedPage'
 
-export const SignUpPage = () => {
+export const SignUpPage = ({setRightButtonText}) => {
     useUnprotectedPage()
     
     return (
         <ScreenContaier>
             <LogoImage src={logo} />
-            <SignUpForm />
+            <SignUpForm setRightButtonText={setRightButtonText}/>
         </ScreenContaier>
     )
 }
