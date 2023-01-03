@@ -1,16 +1,11 @@
 import React from 'react'
 import AppBar from '@mui/material/AppBar'
 import Button from '@mui/material/Button'
-import styled from 'styled-components'
-import { Toolbar } from '@mui/material'
 import { goToRecipesList, goToLogin} from '../../routes/cordinator'
 import { useNavigate } from 'react-router-dom'
+import { StyledToolBar } from './styled'
 
-const StyledToolBar = styled(Toolbar) `
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-`
+
 export const Header = () => {
   const navigate = useNavigate()
   return (
