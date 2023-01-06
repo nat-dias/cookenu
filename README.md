@@ -3,7 +3,7 @@ Site de receitas deliciosas
 
 O objetivo é construir uma aplicação web front-end que funcione como um site de receitas de cozinha para usuários inscritos, onde o usuário pode consultá-la e também adicionar novas receitas. 
 
-* Link do surge: https://nonchalant-reaction.surge.sh/login
+* Link do surge: https://nonchalant-reaction.surge.sh
 
 ### Recursos
 * API: https://documenter.getpostman.com/view/21151478/2s8YzMZRju#intro
