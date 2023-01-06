@@ -1,18 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { AddRecipeFormContainer, InputsContainer } from './styled'
-import { Button, TextField } from '@mui/material'
+import { Button, CircularProgress, TextField } from '@mui/material'
 import { useForm } from '../../hooks/useForm'
 import { useNavigate } from 'react-router-dom'
 import { createRecipe } from '../../services/recipe'
 
-
 export const AddRecipesForm = () => {
     const navigate = useNavigate()
-    const [form, onChange, clear] = useForm({title: '', description: '', imageUrl: ''})
+    const [form, onChange, clear] = useForm({ title: '', description: '', imageUrl: '' })
+    const [isLoading, setIsloading] = useState(false)
 
     const onSubmitForm = (e) => {
         e.preventDefault()
-        createRecipe(form, clear, navigate)
+        createRecipe(form, clear, navigate, setIsloading)
     }
 
     return (
@@ -62,7 +62,7 @@ export const AddRecipesForm = () => {
                         color={'primary'}
                         margin={'20px'}
                     >
-                        Adicionar receita
+                        {isLoading ? <CircularProgress color={'inherit'} size={24} /> : <>Adicionar receita</>}
                     </Button>
                 </InputsContainer>
             </AddRecipeFormContainer>
