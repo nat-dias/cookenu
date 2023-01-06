@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { InputsContainer } from './styled'
-import { Button, TextField } from '@mui/material'
+import { Button, CircularProgress, TextField } from '@mui/material'
 import { useForm } from '../../hooks/useForm'
 import { login } from '../../services/user'
 import { useNavigate } from 'react-router-dom'
@@ -9,10 +9,11 @@ import { useNavigate } from 'react-router-dom'
 export const LoginForm = ({setRightButtonText}) => {
     const [form, onChange, clear] = useForm({ email: '', password: '' })
     const navigate = useNavigate()
+    const [isLoading, setIsloading] = useState(false)
 
     const onSubmitForm = (e) => {
         e.preventDefault()
-        login(form, clear, navigate, setRightButtonText)
+        login(form, clear, navigate, setRightButtonText, setIsloading)
     }
 
     return (
@@ -49,7 +50,7 @@ export const LoginForm = ({setRightButtonText}) => {
                     color={'primary'}
                     margin={'dense'}
                 >
-                    Fazer login
+                    {isLoading ? <CircularProgress color={'inherit'} size={24}/> : <>Fazer login</>}                    
                 </Button>
             </form>
         </InputsContainer>

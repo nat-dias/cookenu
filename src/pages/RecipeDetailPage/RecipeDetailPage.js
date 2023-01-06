@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material'
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import { Loading } from '../../components/Loading/Loadin'
 import { BASE_URL } from '../../constants/url'
 import { useProtectedPage } from '../../hooks/useProtectedPage'
 import { useRequestData } from '../../hooks/useRequestData'
@@ -16,7 +17,7 @@ export const RecipeDetailPage = () => {
 
     return (
         <ScreenContainer>
-            {recipe &&
+            {recipe ?
                 <RecipeContainer>
                     <RecipeImage src={recipe.imageUrl} />
                     <Typography
@@ -33,7 +34,10 @@ export const RecipeDetailPage = () => {
                     >
                         {recipe && recipe.description}
                     </Typography>
-                </RecipeContainer>}
+                </RecipeContainer>
+                :
+                <Loading />    
+            }
         </ScreenContainer>
     )
 }

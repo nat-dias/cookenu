@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { InputsContainer } from './styled'
-import { Button, TextField } from '@mui/material'
+import { Button, CircularProgress, TextField } from '@mui/material'
 import { useForm } from '../../hooks/useForm'
 import { useNavigate } from 'react-router-dom'
 import { signUp } from '../../services/user'
@@ -8,14 +8,14 @@ import { signUp } from '../../services/user'
 export const SignUpForm = ({setRightButtonText}) => {
     const [form, onChange, clear] = useForm({ name: '', email: '', password: '' })
     const navigate = useNavigate()
+    const [isLoading, setIsloading] = useState(false)
 
     const onSubmitForm = (e) => {
         e.preventDefault()
         console.log(form)
-        signUp(form, clear, navigate, setRightButtonText)
+        signUp(form, clear, navigate, setRightButtonText,setIsloading)
     }
 
-    
     return (
         <InputsContainer>
             <form onSubmit={onSubmitForm}>
@@ -29,7 +29,6 @@ export const SignUpForm = ({setRightButtonText}) => {
                     required
                     autoFocus
                     margin={'dense'}
-
                 />
 
                 <TextField
@@ -62,7 +61,7 @@ export const SignUpForm = ({setRightButtonText}) => {
                     variant={'contained'}
                     color={'primary'}
                 >
-                    Cadastrar
+                    {isLoading ? <CircularProgress color={'inherit'} size={24}/> : <>Cadastrar</>}            
                 </Button>
             </form>
         </InputsContainer>
