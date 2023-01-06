@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Cookenu
+Site de receitas deliciosas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O objetivo é construir uma aplicação web front-end que funcione como um site de receitas de cozinha para usuários inscritos, onde o usuário pode consultá-la e também adicionar novas receitas. 
 
-## Available Scripts
+* Link do surge: https://nonchalant-reaction.surge.sh/login
 
-In the project directory, you can run:
+### Recursos
+* API: https://documenter.getpostman.com/view/21151478/2s8YzMZRju#intro
+* ReactJS
+* Styled-components
+* Axios
+* React Router Dom
+* Material UI
 
-### `npm start`
+### 🏁 Para rodar localmente o projeto:
+Clone este repositório em sua máquina:
+* git clone https://github.com/nat-dias/cookenu.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##### Rode:
+* npm install
+* npm install styled-components
+* npm install axios
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##### Para iniciar:
+* npm run start
 
-### `npm test`
+### Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* A aplicação requer que usuário faça login para acessar as receitas
+* Se não possuir login, basta cadastrar-se
+* Ao efetuar login ou cadastrar-se, será redirecionado para uma página com todas as receitas listadas
+* Ao clicar no card da receita escolhida, abrirá uma página com os detalhes
+* Se quiser adicionar uma receita, basta clicar no botão de + para inseri-la no banco
+* E depois é só clicar em logout para sair
 
-### `npm run build`
+![image](https://user-images.githubusercontent.com/89169943/211097036-4a756e47-e203-4dd0-83fa-f7de93c0f2cd.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://user-images.githubusercontent.com/89169943/211099017-94e1909c-6ba0-4e27-b8bb-8cc813ee6b1d.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://user-images.githubusercontent.com/89169943/211098365-4766c937-4a1e-49df-9321-2b98a570a82f.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![image](https://user-images.githubusercontent.com/89169943/211098545-4f9e3106-1e85-420d-9ac9-20d29a931c17.png)
 
-### `npm run eject`
+![image](https://user-images.githubusercontent.com/89169943/211098626-0ce07c0e-3277-4f61-aaf9-def7b97da5df.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![image](https://user-images.githubusercontent.com/89169943/211098725-378b0c86-134c-47eb-9bf4-cc68b1709e88.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image](https://user-images.githubusercontent.com/89169943/211098830-4b5e838c-a79e-48ab-9ba9-cb8b47ccfd75.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![image](https://user-images.githubusercontent.com/89169943/211098897-d67a3802-4585-4ae0-b357-2c79edb7dd1d.png)
