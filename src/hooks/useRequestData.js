@@ -15,7 +15,7 @@ export const useRequestData = (initialData, url) => {
         })
         .catch((err) => {
             console.log(err)
-            alert('Ocorreu um erro. Tente novamente')
+            // alert('Ocorreu um erro. Tente novamente')
         })
     }, [url])
 
