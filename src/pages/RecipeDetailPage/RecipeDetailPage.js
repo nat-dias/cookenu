@@ -1,11 +1,39 @@
+import { Typography } from '@mui/material'
 import React from 'react'
-import {useProtectedPage} from '../../hooks/useProtectedPage'
+import { useParams } from 'react-router-dom'
+import { BASE_URL } from '../../constants/url'
+import { useProtectedPage } from '../../hooks/useProtectedPage'
+import { useRequestData } from '../../hooks/useRequestData'
 
-import './styled.css'
+import './styled.js'
+import { RecipeContainer, RecipeImage, ScreenContainer } from './styled.js'
 
-export const RecipeDetailPage= () => {
+export const RecipeDetailPage = () => {
     useProtectedPage()
+    const params = useParams()
+    const recipe = useRequestData({}, `${BASE_URL}/recipe/${params.id}`)
+
+
     return (
-        <h1>RecipeDetailPage</h1>
+        <ScreenContainer>
+            {recipe &&
+                <RecipeContainer>
+                    <RecipeImage src={recipe.imageUrl} />
+                    <Typography
+                        gutterBottom
+                        align={'center'}
+                        variant={'h4'}
+                        color={'primary'}
+                    >
+                        {recipe && recipe.title}
+                    </Typography>
+
+                    <Typography
+                        align={'justify'}
+                    >
+                        {recipe && recipe.description}
+                    </Typography>
+                </RecipeContainer>}
+        </ScreenContainer>
     )
 }
